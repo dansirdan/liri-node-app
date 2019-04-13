@@ -91,6 +91,7 @@ function spotifyThis(newArg) {
         var song = res.tracks.items[i].name;
         var link = res.tracks.items[i].external_urls.spotify;
         var album = res.tracks.items[i].album.name;
+
         line1 = `--------------------------------`
         line2 = `Artist(s): ${artist}`
         line3 = `Song Title: ${song} ${link}`
