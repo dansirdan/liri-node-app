@@ -33,8 +33,8 @@ function movieThis() {
 
   // REDEFINES THE ARGUEMENT FOR THE FUNCTION
   var movieTitle = argRaw.slice(3).join("+");
-
-  axios.get(`http://www.omdbapi.com/?t=${movieTitle}&apikey=${keys.movies}`)
+  console.log(keys.movies)
+  axios.get(`http://www.omdbapi.com/?t=${movieTitle}&apikey=${keys.movies.id}`)
     .then(function (res) {
 
       // MOVIE VARIABLES
@@ -126,7 +126,7 @@ function concertThis() {
 
   var artistConc = argRaw.slice(3).join("+");
   // console.log(artistConc);
-
+  console.log(keys.bands)
   axios.get(`https://rest.bandsintown.com/artists/${artistConc}/events?app_id=${keys.bands}`)
 
     .then(
