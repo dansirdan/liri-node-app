@@ -34,7 +34,7 @@ function movieThis() {
   // REDEFINES THE ARGUEMENT FOR THE FUNCTION
   var movieTitle = argRaw.slice(3).join("+");
 
-  axios.get(`http://www.omdbapi.com/?t=${movieTitle}&apikey=trilogy`)
+  axios.get(`http://www.omdbapi.com/?t=${movieTitle}&apikey=${keys.movies}`)
     .then(function (res) {
 
       // MOVIE VARIABLES
@@ -47,11 +47,11 @@ function movieThis() {
       var plot = res.data.Plot;
       var actors = res.data.Actors;
 
-      line1 = `\nMovie Title: ${title}\nRelease Year: ${year}`
-      line2 = `IMDB Rating: ${imdb}\nRotten Tomatoes: ${rotTomat}`
-      line3 = `Country: ${local}\nLanguages: ${lang}`
-      line4 = `Actors: ${actors}\n\nPlot: ${plot}\n`
-      line5 = `--------------------------------`
+      var line1 = `\nMovie Title: ${title}\nRelease Year: ${year}`
+      var line2 = `IMDB Rating: ${imdb}\nRotten Tomatoes: ${rotTomat}`
+      var line3 = `Country: ${local}\nLanguages: ${lang}`
+      var line4 = `Actors: ${actors}\n\nPlot: ${plot}\n`
+      var line5 = `--------------------------------`
 
       console.log(line1);
       console.log(line2);
@@ -92,11 +92,11 @@ function spotifyThis(newArg) {
         var link = res.tracks.items[i].external_urls.spotify;
         var album = res.tracks.items[i].album.name;
 
-        line1 = `--------------------------------`
-        line2 = `Artist(s): ${artist}`
-        line3 = `Song Title: ${song} ${link}`
-        line4 = `Album: ${album}`
-        line5 = `--------------------------------`
+        var line1 = `--------------------------------`
+        var line2 = `Artist(s): ${artist}`
+        var line3 = `Song Title: ${song} ${link}`
+        var line4 = `Album: ${album}`
+        var line5 = `--------------------------------`
 
         console.log(line1);
         console.log(line2);
@@ -127,7 +127,7 @@ function concertThis() {
   var artistConc = argRaw.slice(3).join("+");
   // console.log(artistConc);
 
-  axios.get(`https://rest.bandsintown.com/artists/${artistConc}/events?app_id=codingbootcamp`)
+  axios.get(`https://rest.bandsintown.com/artists/${artistConc}/events?app_id=${keys.bands}`)
 
     .then(
       function (res) {
@@ -141,11 +141,11 @@ function concertThis() {
           var date = concerts.datetime;
           var parsedDate = moment(date).format(`DD-MM-YYYY`);
 
-          line1 = `--------------------------------`
-          line2 = `Venue: ${venue}`
-          line3 = `Location: ${city}, ${country}`
-          line4 = `Date: ${parsedDate}`
-          line5 = `--------------------------------`
+          var line1 = `--------------------------------`
+          var line2 = `Venue: ${venue}`
+          var line3 = `Location: ${city}, ${country}`
+          var line4 = `Date: ${parsedDate}`
+          var line5 = `--------------------------------`
 
           console.log(line1);
           console.log(line2);
