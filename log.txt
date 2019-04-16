@@ -833,3 +833,15 @@ Venue: LADY GAGA FULL LAS VEGAS EXPERIENCE: ENIGMA & JAZZ & PIANO (includes both
 Location: Las Vegas, United States
 Date: 09-11-2019
 --------------------------------
+
+Movie Title: Moulin Rouge
+Release Year: 1952
+IMDB Rating: 7.1
+Rotten Tomatoes: 78%
+Country: UK
+Languages: English, French
+Actors: José Ferrer, Zsa Zsa Gabor, Suzanne Flon, Claude Nollier
+
+Plot: Fictional account of French artist Henri de Toulouse-Lautrec.
+
+--------------------------------

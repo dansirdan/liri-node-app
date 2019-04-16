@@ -127,6 +127,7 @@ function concertThis() {
   var artistConc = argRaw.slice(3).join("+");
   // console.log(artistConc);
   console.log(keys.bands)
+
   axios.get(`https://rest.bandsintown.com/artists/${artistConc}/events?app_id=${keys.bands}`)
 
     .then(
