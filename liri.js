@@ -1,3 +1,4 @@
+// VARIABLES AND REQUIRED FILES
 var dot = require("dotenv").config();
 var axios = require("axios");
 var moment = require("moment");
@@ -11,7 +12,7 @@ var spotify = new Spotify(keys.spotify);
 var query = process.argv[2];
 var argRaw = process.argv;
 
-// SWITCH STATEMENT FOR 
+// SWITCH STATEMENT FOR LIRI APP
 switch (query) {
   case "movie-this":
     movieThis();
@@ -47,6 +48,7 @@ function movieThis() {
       var plot = res.data.Plot;
       var actors = res.data.Actors;
 
+      // creating variables to send info to log.txt
       var line1 = `\nMovie Title: ${title}\nRelease Year: ${year}`
       var line2 = `IMDB Rating: ${imdb}\nRotten Tomatoes: ${rotTomat}`
       var line3 = `Country: ${local}\nLanguages: ${lang}`
@@ -65,7 +67,7 @@ function movieThis() {
     .catch(function (err) {
       if (err) {
         console.log("--------------------------------");
-        console.log("\nSorry we don't have enough data on that location! Try somewhere else.\n");
+        console.log("\nSorry we don't have enough data on that movie! Try somewhere else.\n");
         throw err;
       };
     });
@@ -187,6 +189,7 @@ function thatWay() {
   });
 };
 
+// PRINGTS TO THE LOG.TXT FILE IN ORDER TO SAVE DATA FOR THE USER
 function printLog(line1, line2, line3, line4, line5) {
 
   var text = `\n${line1}\n${line2}\n${line3}\n${line4}\n${line5}`
