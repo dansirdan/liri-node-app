@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/dansirdan/liri-node-app#readme",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "dotenv": "^7.0.0",
     "moment": "^2.24.0",
     "node-spotify-api": "^1.0.7"
